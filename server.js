@@ -16,6 +16,9 @@ let idCounter = 1; // Inicialización del contador de IDs
 
 //! READ
 
+app.get("/", (req, res) => {
+  res.send("Home here")
+})
 app.get("/characters", (req, res) => {
   res.json(characters)
 })
