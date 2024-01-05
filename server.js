@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT;
 const axios = require("axios");
 const cors = require('cors');
+require("dotenv").config()
 
-app.listen(port);
+app.listen(process.env.PORT);
 app.use(express.json());
 app.use(cors({ origin: 'http://localhost:5173' })); // Configurar CORS para permitir solicitudes desde el puerto de tu aplicación de React
 
@@ -143,4 +144,4 @@ app.delete('/characters/:id', (req, res) => {
 
 
 
-console.log("App working on portal 3000");
+console.log("App working on portal " + process.env.PORT);
