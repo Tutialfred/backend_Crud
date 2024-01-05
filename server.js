@@ -7,7 +7,7 @@ require("dotenv").config()
 
 app.listen(process.env.PORT);
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173' })); // Configurar CORS para permitir solicitudes desde el puerto de tu aplicación de React
+app.use(cors({ origin: 'https://asd-khaki-pi.vercel.app' })); // Configurar CORS para permitir solicitudes desde el puerto de tu aplicación de React
 
 const characters = [];
 let idCounter = 1; // Inicialización del contador de IDs
